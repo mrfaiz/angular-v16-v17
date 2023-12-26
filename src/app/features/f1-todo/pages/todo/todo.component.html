@@ -1,0 +1,7 @@
+<ul>
+    @for (todo of todos(); track todo.id) {
+        <li><input type="checkbox" [value]="todo.id" [checked]="todo.completed" (change)="changed($event)" >{{todo.title}}</li>
+    }
+</ul>
+
+<button (click)="submit()">Submit</button>
